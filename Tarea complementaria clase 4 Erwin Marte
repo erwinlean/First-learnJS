@@ -1,0 +1,41 @@
+const saludo=(nombre)=>`Hola, ${nombre}`;
+var saludosa= alert (saludo(nombre=prompt("Ingrese su nombre")));
+
+var consultaSioNo = prompt ("Desea realizar un calculo de sus gastos? si/no");
+var respuestaSi= consultaSioNo =="si";
+
+if (respuestaSi){
+
+    var cuenta1= parseInt(prompt("Ingrese el valor de la primera cuenta que desea pagar: "));
+    var cuenta2= parseInt(prompt("Ingrese la segunda el valor de la siguiente boleta de pago: "));
+    const sumacuenta1= (var1,var2)=>{return var1+var2};
+    var primerascuuentas = sumacuenta1(cuenta1,cuenta2);
+
+    console.log ("total  primeras cuentas " + primerascuuentas);
+
+    var pregmascuentas= prompt ("desea seguir sumando mas cuentas? (si/no");
+    var maspreg = pregmascuentas == "si";
+
+} else if (maspreg){
+    var cuenta3= parseInt(prompt("Ingrese  el valor de la siguiente boleta de pago: "));
+    var cuenta4= parseInt(prompt("Ingrese  el valor de la siguiente boleta de pago: "));
+    const sumacuenta2= (var3,var4)=>{return var3+var4};
+    var segundascuentas = sumacuenta2(cuenta3,cuenta4);
+    console.log ("total de segundas cuentas " + segundascuentas);
+
+} else if (cuenta1,cuenta2,cuenta3,cuenta4!== isNaN){
+    alert ("por favor reintente ingresando datos numericos, gracias")
+}
+
+var abono= parseInt( prompt ("con cuanto dinero abona? (lamentablemente solo se acepta efectivo en este momento"));
+var cuentastotal= primerascuuentas ||primerascuuentas + segundascuentas;
+var restanteabono = cuentastotal-abono;
+
+
+const despedidaconsuma= (despedida) =>`Gracias por utilizarnos ${nombre}, tu importe a pagar es de ${cuentastotal}, y su vuelto es de ${restanteabono}`;
+console.log (`cuenta total ${cuentastotal}`)
+console.log (`abona con ${abono}`)
+console.log (`le queda del importe o le falta ${restanteabono}`)
+
+
+alert (despedidaconsuma(saludosa));
