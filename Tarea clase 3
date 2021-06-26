@@ -1,0 +1,15 @@
+//calcular los segundos que tarda x vehiculo en llegar su velocidad maxima, teniendo en cuenta la aceleracion
+
+var acele0A100 = parseFloat (100 / 12.94); // 100km en 12,94 seg
+var velMax= parseFloat(173);
+console.log (`Aceleracion por segundos es de  ${acele0A100}`);
+
+
+while (acele0A100<velMax){
+    let aceleracionMaxenX= velMax/acele0A100;
+    let velMaxima = acele0A100*aceleracionMaxenX;
+    console.log(`velocidad maxima, multiplicando segundos y aceleracion ${velMaxima}  `);
+    parseFloat(aceleracionMaxenX);
+    alert (`La aceleracion maxima del vehiculo es de ${velMax}, y tarda ${aceleracionMaxenX} segundos en llegar a ella.`);
+    break;
+}
