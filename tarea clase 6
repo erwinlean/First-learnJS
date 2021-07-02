@@ -1,0 +1,47 @@
+class oPersonal {
+    constructor(oNombre,oApellido,oDni,oFechaNa,oEdad,oOcupacion,oDireccion,oTelContacto,oMailContac,oTelefonoFamimliar,oSangre,oDatosFami){
+        this.nombre = oNombre;
+        this.apellido=oApellido;
+        this.dni=oDni;
+        this.fechanacimiento= oFechaNa;
+        this.edad= oEdad;
+        this.ocupacionADesempeñar=oOcupacion; //hacer filtrar ocupacion para ver donde en que variable corresponde segun la tarea quedesempeñe**
+        this.domicilio=oDireccion;
+        this.telefonocontacto=oTelContacto;
+        this.mail=oMailContac;
+        this.telefonofamilia=oTelefonoFamimliar;
+        this.tiposanguineo=oSangre;
+        this.Datofamilia=oDatosFami; 
+    }
+};
+const nuevoEmpleado = () => {
+    alert ("Para finalizar el procesamiento de un nuevo empleado, escriba *salir*.");
+    while (true) { 
+        let oNombre = prompt("Bienvenido, ingrese su nombre: ");
+        if (oNombre == "salir") break;
+        let oApellido = prompt ("Apellido: ");
+        let oDireccion = prompt ("Domicilio: ");
+        let oEdad = parseInt (prompt ("ingrese su edad: "));
+        let oDni = parseInt(prompt("DNI: ")); 
+        let oFechaNa= prompt ("fecha de nacimiento: ");
+        let oSangre= prompt ("Tipo sanguineo: ");
+        let oTelContacto= parseInt (prompt ("Su numero de telefono"));
+        let oMailContac = prompt ("Mail de contacto: ");
+        let oTelefonoFamimliar= parseInt (prompt("telefono de contacto:"));
+        let oDatosFami = prompt ("datos familiares: (casado,hijos,etc)");
+        let oOcupacion = prompt ("cargo a desempeñar: "); 
+        var personal = new oPersonal (oNombre,oApellido,oDni,oFechaNa,oEdad,oOcupacion,oDireccion,oTelContacto,oMailContac,oTelefonoFamimliar,oSangre,oDatosFami); 
+        agregadospersonal.push(personal);
+    }
+};
+var agregadospersonal = []; //filtrar y enviar al end (en base al end y tareas, realizar nuevas variantes para cada caso
+
+const filtrado = () => agregadospersonal.filter("administrativo");
+
+console.log (agregadospersonal);
+var personalAdmin = [];
+var personalOperador = [];
+var personalChofer = [];
+var personalMecanico = []; 
+nuevoEmpleado(); 
+alert (`Si desea ser parte de nuestra familia,pongase en contacto con ${personalAdmin}`);
